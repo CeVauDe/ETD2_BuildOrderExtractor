@@ -22,3 +22,21 @@ optional arguments:
 
   `--replay_path REPLAY_PATH
                         Path to replay.json (default path goes to default replay directory)`
+
+# result
+The resulting build order will look something like this (only logged to the console for now):
+```+--------+----------+-----------------+-------------------+------------+
+|  Wave  |  Action  |      Tower      |    Upgrade to     |  Position  |
++--------+----------+-----------------+-------------------+------------+
++********+**********+*****************+*******************+************+
+|  Pre   |   Select element:     Fire                                  |
++********+**********+*****************+*******************+************+
+|  Pre   | Build    | Fire            |                   |      22    |
++********+**********+*****************+*******************+************+
+|    6   |   Select element:     Light                                 |
++********+**********+*****************+*******************+************+
+|    7   | Upgrade  | Fire            | Lightning       1 |      94    |
+|    9   | Upgrade  | Fire            | Lightning       1 |      22    |
++********+**********+*****************+*******************+************+
+|   11   |   Select element:     Earth                                 |
++********+**********+*****************+*******************+************+
