@@ -1,6 +1,6 @@
 import pandas as pd
-import source.config as cfg
-import source.map_state as ms
+import config as cfg
+import map_state as ms
 
 
 def is_player_id_available(replay_data, player_id):
@@ -23,7 +23,7 @@ def get_df_from_replay_data(replay_data, df_te, player_id):
             item["upgrade_lvl_to"] = 1
             item["upgrade_tower_from"] = ""
             item["upgrade_tower_to"] = ""
-            if item["type"] is 1:
+            if item["type"] == 1:
                 item["tower_elements_list"] = df_te.loc[df_te["buildIdx"] == item["buildIdx"]]["tower_elements_list"].values[0]
             items.append(item)
 
@@ -62,16 +62,16 @@ def resolve_tower_upgrades(df, df_te):
     map_state = ms.MapState(df_te=df_te)
 
     for index, row in df.iterrows():
-        if row["_merge"] is "left_only":
+        if row["_merge"] == "left_only":
             # build tower
-            if row["action"] is cfg.build_tower_string:
+            if row["action"] == cfg.build_tower_string:
                 map_state.build_tower(
                     pos=row["bpIdx"],
                     elements_list=int(row["tower_elements_list"])
                 )
 
             # upgrade tower
-            elif row["action"] is cfg.upgrade_tower_string:
+            elif row["action"] == cfg.upgrade_tower_string:
                 tower_name, tower_lvl = map_state.upgrade_tower(
                     pos=row["bpIdx"],
                     new_element=int(row["upgradeEleIdx"])
@@ -83,11 +83,11 @@ def resolve_tower_upgrades(df, df_te):
                 df.at[index, "upgrade_lvl_to"] = tower_lvl.new
 
             # sell tower
-            elif row["action"] is cfg.sell_tower_string:
+            elif row["action"] == cfg.sell_tower_string:
                 map_state.sell_tower(pos=row["bpIdx"])
 
             # cancel tower build
-            elif row["action"] is cfg.cancel_build_string:
+            elif row["action"] == cfg.cancel_build_string:
                 map_state.cancel_tower_build(pos=row["bpIdx"])
 
     return df

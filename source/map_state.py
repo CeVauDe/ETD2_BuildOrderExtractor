@@ -1,5 +1,5 @@
 import pandas as pd
-import source.config as cfg
+import config as cfg
 from dataclasses import dataclass
 
 

@@ -1,6 +1,6 @@
 import json
 import pandas as pd
-import source.config as cfg
+import config as cfg
 
 
 def read_replay_data(pfn_replay):
@@ -27,14 +27,14 @@ def print_line(row, current_wave):
         return
 
     # select element
-    if int(row["type"]) is 4:
+    if int(row["type"]) == 4:
         print(f"+********+**********+*****************+*******************+************+")
         print(f"|  {current_wave:3}   |   {row['action']}:     {row['elements']:37} |")
         print(f"+********+**********+*****************+*******************+************+")
         return
 
     upgrade = ""
-    if int(row["type"]) is 2:
+    if int(row["type"]) == 2:
         upgrade = f"{row['upgrade_tower_to']:15} {row['upgrade_lvl_to']:1.0f}"
 
     # print(f"+--------+----------+-----------------+-------------------+------------+")
@@ -51,7 +51,7 @@ def print_build_order(df):
     print_header()
 
     for index, row in df.iterrows():
-        if row["_merge"] is "left_only":
+        if row["_merge"] == "left_only":
             print_line(row=row, current_wave=current_wave)
         else:
             current_wave = f"{int(row['wave'] + 2):3}"
