@@ -1,0 +1,45 @@
+buildIdx;tower_name;light;darkness;water;fire;nature;earth
+0;Arrow;False;False;False;False;False;False
+1;Cannon;False;False;False;False;False;False
+6;Pure Light;True;False;False;False;False;False
+7;Pure Darkness;False;True;False;False;False;False
+2;Pure Water;False;False;True;False;False;False
+3;Pure Fire;False;False;False;True;False;False
+4;Pure Nature;False;False;False;False;True;False
+5;Pure Earth;False;False;False;False;False;True
+43;Periodic;True;True;True;True;True;True
+20;Atom;True;False;False;False;False;True
+15;Lightning;True;False;False;True;False;False
+12;Poison;False;True;True;False;False;False
+19;Disease;False;True;False;False;True;False
+8;Vapor;False;False;True;True;False;False
+11;Ice;True;False;True;False;False;False
+13;Solar;False;False;False;True;True;False
+16;Infernal;False;True;False;True;False;False
+17;Mushroom;False;False;False;False;True;True
+18;Life;True;False;False;False;True;False
+21;Howitzer;False;True;False;False;False;True
+10;Geyser;False;False;True;False;False;True
+22;Trickery;True;True;False;False;False;False
+9;Well;False;False;True;False;True;False
+14;Blacksmith;False;False;False;True;False;True
+32;Astral;True;True;True;False;False;False
+42;Laser;True;True;False;False;False;True
+38;Runic;True;True;False;True;False;False
+41;Ethereal;True;True;False;False;True;False
+29;Flooding;False;True;True;False;True;False
+28;Wisp;True;False;True;False;True;False
+37;Flamethrower;False;True;False;True;False;True
+24;Haste;False;False;True;True;False;True
+23;Impulse;False;False;True;True;True;False
+27;Golem;False;False;True;False;True;True
+33;Quake;False;False;False;True;True;True
+36;Money;True;False;False;True;False;True
+34;Nova;True;False;False;True;True;False
+35;Jinx;False;True;False;True;True;False
+25;Windstorm;True;False;True;True;False;False
+30;Polar;True;False;True;False;False;True
+26;Corrosion;False;True;True;True;False;False
+40;Root;False;True;False;False;True;True
+39;Incarnation;True;False;False;False;True;True
+31;Muck;False;True;True;False;False;True
