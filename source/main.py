@@ -2,6 +2,8 @@ import os
 import argparse
 import project_io as project_io
 import data_analysis as da
+import pandas as pd
+import config as cfg
 import sys
 from pathlib import Path
 
@@ -33,10 +35,7 @@ if __name__ == "__main__":
         exit(-1)
 
     # load tower data
-    exec_file = Path(sys.argv[0])
-    p_root = exec_file.parent.parent
-    pfn_tower_elements = os.path.join(p_root, "data\\tower_elements.csv")
-    df_te = project_io.read_tower_elements(pfn_tower_elements)
+    df_te = pd.DataFrame(cfg.tower_elements)
 
     # process replay
     df = da.get_df_from_replay_data(data, df_te, player_ID)
