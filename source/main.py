@@ -8,6 +8,8 @@ import sys
 from pathlib import Path
 
 if __name__ == "__main__":
+    print(f"ElementTD 2 Build Order Extractor Version {cfg.version_string}")
+
     parser = argparse.ArgumentParser()
     parser.add_argument("-n", "--replay_name",
                         help="Filename of replay to extract from (*.json)",
