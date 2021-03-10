@@ -1,0 +1,5 @@
+# GUI: generate python code from Qt.ui
+pyuic5 -x .\source\gui_simple_designer.ui  -o .\source\gui_simple_designer.py
+
+# PyInstaller: generate binary:
+pyinstaller --onefile --windowed .\source\EleTD2_BuildOrderExtractor_GUI.py
