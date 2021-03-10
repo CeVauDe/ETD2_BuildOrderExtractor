@@ -1,4 +1,4 @@
-version_string = "0.1.0"
+version_string = "0.2.0"
 build_tower_string = "Build"
 upgrade_tower_string = "Upgrade"
 sell_tower_string = "Sell"
