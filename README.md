@@ -1,6 +1,9 @@
 # ETD2_BuildOrderExtractor
 Python script, that can extract a build order from a local replay json from the game ElementTD 2
 
+# GUI version
+The folder `binary_releases` now contains a GUI-Binary (Version 0.2.0) 
+
 # install
 1. clone repository 
 2. create venv (I use pyCharm and created my venv there)
